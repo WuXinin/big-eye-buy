@@ -1,0 +1,27 @@
+.input {
+	background: none;
+	appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	padding-block: 0.25rem;
+	padding-inline: 0;
+	color: #999999;
+	font-size: 1.25rem;
+	flex: 1;
+	height: 3rem;
+	border-bottom: 0.1875rem #f38590 solid;
+	font-family: inherit;
+}
+
+.form-input-root {
+	border-bottom-width: 0 !important;
+}
+
+.input-root.size-compact {
+	height: 2.5rem !important;
+}
+
+.input-root.size-compact input {
+	height: 100%;
+}

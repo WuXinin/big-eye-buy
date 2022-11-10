@@ -1,0 +1,129 @@
+.card {
+	background-color: #fffef5;
+	border-radius: 6.25rem;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.card-window {
+	border: 0.1875rem solid #5b5b5b;
+}
+
+.card-inner {
+	padding-inline: 5rem;
+	padding-block: 6rem;
+	max-width: 70rem;
+	max-height: 42rem;
+	width: 100%;
+	margin: auto;
+	flex: 1;
+}
+
+.card-small {
+	border-radius: 4rem;
+	max-height: 100%;
+}
+
+.card-small .card-inner {
+	max-width: none;
+	max-height: none;
+	padding: 2rem;
+}
+
+.card-window-bar {
+	display: flex;
+	align-items: center;
+	height: 3.75rem;
+	width: 100%;
+	align-self: stretch;
+	flex-shrink: 0;
+	background-color: #a6e8fe;
+	border-bottom: 0.15rem solid #000;
+	padding-left: 4.5rem;
+}
+
+.card-small .card-window-bar {
+	padding-left: 2.25rem;
+	height: 3.25rem;
+}
+
+.card-small .card-window-bar .card-win-button {
+	width: 1.25rem;
+	height: 1.25rem;
+	margin-right: 0.375rem;
+}
+
+.card-window-bar .card-win-button {
+	height: 1.5rem;
+	width: 1.5rem;
+	border: 0.125rem solid #000;
+	margin-right: 0.5rem;
+	border-radius: 100%;
+}
+
+.card-window-bar .btn-1 {background-color: #eb6e6e;}
+.card-window-bar .btn-2 {background-color: #ffdea9;}
+.card-window-bar .btn-3 {background-color: #cce79e;}
+
+
+@media (max-height: 550px) and (min-width: 900px) {
+	.card:not(.card-small) .card-window-bar {
+		height: 2.5rem;
+	}
+
+	.card:not(.card-small) .card-window-bar .card-win-button {
+		height: 1.25rem;
+		width: 1.25rem;
+	}
+}
+
+@media (max-height: 700px) and (min-width: 900px) {
+	.card:not(.card-small) {
+		border-radius: 4rem;
+	}
+	.card:not(.card-small) .card-window-bar {
+		padding-left: 3rem;
+	}
+}
+
+@media (max-width: 1150px) {
+	.card:not(.card-small) .card-inner {
+		padding-inline: 3rem;
+	}
+}
+
+
+@media (max-width: 800px) {
+	.card {
+		border-radius: 4rem;
+	}
+
+	.card:not(.card-small) .card-inner {
+		padding-inline: 4rem;
+	}
+}
+
+
+@media (max-width: 650px) {
+	.card:not(.card-small) .card-inner {
+		padding-inline: 2rem;
+		padding-block: 2rem;
+		max-height: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.card:not(.card-small) .card-inner {
+		padding-inline: 2rem;
+		border-radius: 3rem;
+	}
+}
+
+@media (max-height: 900px) {
+	.card:not(.card-small) .card-inner {
+		padding-block: 2rem;
+		padding-inline: 2rem;
+	}
+}

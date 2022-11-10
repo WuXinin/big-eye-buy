@@ -1,0 +1,57 @@
+.terms-container {
+	display: flex;
+	align-items: center;
+}
+
+.terms-container a {
+	color: #000;
+	font-weight: bold;
+}
+
+.terms-container input {
+	margin-right: 1rem;
+	accent-color: #f38691;
+}
+
+.input-select-row {
+	display: flex;
+}
+
+.input-select-row .input-root {
+	flex: 1;
+}
+
+.input-select-row .input-select {
+	flex: 0.25;
+	min-width: 8.5rem;
+	margin-right: 0.5rem;
+}
+
+.new-crypto-container .button {
+	max-width: 14rem;
+	margin-right: auto;
+}
+
+.new-crypto-container .input-half {
+	max-width: calc(50% - 1rem);
+}
+
+@media (max-width: 900px) {
+	.new-crypto-container .input-half {
+		max-width: none;
+	}
+	.new-crypto-container .button {
+		max-width: 12rem !important;
+		width: 100%;
+	}
+}
+
+@media (max-width: 420px) {
+	.input-select-row > *:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+	
+	.input-select-row {
+		flex-direction: column;
+	}
+}

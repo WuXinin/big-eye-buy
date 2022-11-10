@@ -1,0 +1,36 @@
+.coin {
+	--curr-size: 0;
+	position: absolute;
+	height: 4rem !important;
+	width: 4rem !important;
+	transition: transform 300ms ease-out;
+	top: 0;
+}
+
+.coin-entering {
+	animation: coin-enter 200ms forwards;
+}
+
+.coin-exiting {
+	animation: coin-exit 800ms forwards;
+}
+
+@keyframes coin-enter {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes coin-exit {
+	from {
+		opacity: 1;
+		top: 0;
+	}
+	to {
+		opacity: 0;
+		top: -100%;
+	}
+}

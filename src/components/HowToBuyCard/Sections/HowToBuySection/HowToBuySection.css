@@ -1,0 +1,75 @@
+.how-step {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.how-step .step-wrapper {
+	display: flex;
+}
+
+
+.how-step .step-left, .how-step .step-right {
+	flex: 1;
+}
+
+.how-step .step-left {
+	max-width: 50%;
+}
+
+.how-step .step-right {
+	max-width: 50%;
+}
+
+.how-step .step-right picture {
+	width: 100%;
+}
+
+.how-step .step-right picture img {
+	width: 100%;
+	height: auto;
+	transform: translateX(4rem)
+}
+
+.how-step .step-label {
+	display: flex;
+	align-items: center;
+}
+
+.how-step .step-label img {
+	margin-right: 0.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.how-step .step-label span {
+	margin-left: 0.5rem;
+}
+
+.how-step .button {
+	width: 16.875rem;
+	margin-top: 4rem;
+}
+
+@media (max-width: 1100px) {
+	.how-step .step-wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.how-step .step-left {
+		width: auto;
+		max-width: none;
+	}
+
+	.how-step .step-right {
+		width: auto;
+		max-width: none;
+		padding-inline: 2rem;
+		margin-top: 2rem;
+	}
+
+	.how-step .step-right picture img {
+		transform: none;
+	}
+}

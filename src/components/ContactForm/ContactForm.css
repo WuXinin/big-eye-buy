@@ -1,0 +1,20 @@
+.contact-form .button {
+	margin-block: 0.25rem !important;
+	margin-inline: auto;
+}
+
+.contact-form .terms-container {
+	text-align: left;
+}
+
+.contact-form > *:not(:last-child) {
+	margin-bottom: 1rem !important;
+}
+
+.contact-form .terms-container p {
+	margin: 0
+}
+
+.contact-form .button {
+	margin-top: 1rem !important;
+}

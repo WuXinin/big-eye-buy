@@ -1,0 +1,32 @@
+.input-root {
+	position: relative;
+	align-items: flex-end;
+	display: flex;
+	min-width: 10rem;
+	height: 3rem;
+	border-bottom: 0.1875rem solid #F38590;
+}
+
+.input-root.has-label {
+	padding-top: 1.5rem;
+	height: 4.5rem;
+}
+
+.input-root label {
+	position: absolute;
+	top: 0;
+	font-weight: bold;
+	font-size: 1.25rem;
+}
+
+.input-root .button {
+	margin-left: 1rem;
+	height: 3.5rem;
+}
+
+@media (max-width: 800px) {
+	.input-root .button {
+		min-width: 7rem;
+		height: 3rem;
+	}
+}

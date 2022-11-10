@@ -1,0 +1,41 @@
+.loadable {
+	display: block;
+}
+
+.loadable:not(.none) {
+	animation: load-pulse 1000ms infinite alternate ease-in-out;
+}
+
+.loadable.text {
+	display: inline-block;
+	border-radius: 0.25rem;
+	height: 1em;
+	width: var(--length, 6em)
+}
+
+.loadable.invisible {
+	animation: none;
+}
+
+.loadable.full {
+	height: 100%;
+	width: 100%;
+}
+
+.loadable.block {
+	display: block;
+	border-radius: 0.25rem;
+}
+
+.loadable.paragraph-container {
+	overflow-x: hidden;
+}
+
+@keyframes load-pulse {
+	from {
+		background-color: rgba(0,0,0,0.2);
+	}
+	to {
+		background-color: rgba(0,0,0,0.3);
+	}
+}

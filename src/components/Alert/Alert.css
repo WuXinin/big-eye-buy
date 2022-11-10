@@ -1,0 +1,86 @@
+.alert {
+	transition: bottom 300ms 200ms ease-out, left 500ms ease-out, transform 500ms ease-out, opacity 500ms ease-out;
+	animation: alert-enter 500ms;
+	display: flex;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	max-width: 30rem;
+	width: calc(100vw - 2rem);
+	padding-left: 1rem;
+	padding-right: 0.75rem;
+	padding-block: 1rem;
+	background-color: #fffef5;
+	border-radius: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	z-index: 9999;
+	overflow: hidden;
+}
+
+@keyframes alert-enter {
+	from {
+		left: 0;
+		transform: translate(-100%);
+	}
+	to {
+		left: 50%;
+		transform: translate(-50%);
+	}
+}
+
+.alert svg {
+	color: inherit;
+	fill: currentColor;
+}
+
+.alert.success > svg {color: #6fbf73}
+.alert.success .duration-bar {background-color: #6fbf73;}
+
+.alert.info > svg {color: #4791db}
+.alert.info .duration-bar {background-color: #4791db;}
+
+.alert.warning > svg {color: #ffb333}
+.alert.warning .duration-bar {background-color: #ffb333;}
+
+.alert.error > svg {color: #ff6666}
+.alert.error .duration-bar {background-color: #ff6666;}
+
+.alert .text-container {
+	display: flex;
+	flex-direction: column;
+	padding-inline: 0.75rem;
+	flex: 1;
+}
+
+.alert .alert-title {
+	font-size: 1.125rem;
+	font-weight: bold;
+	margin: 0;
+	margin-bottom: 0.25rem;
+}
+
+.alert .alert-label {
+	font-size: 1rem;
+	margin: 0;
+}
+
+.alert .duration-bar {
+	animation: alert-duration-bar-shrink forwards 500ms linear;
+	height: 0.25rem;
+	width: 100%;
+	background-color: #000;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+@keyframes alert-duration-bar-shrink {
+	from {
+		width: 100%;
+	}
+	to {
+		width: 0%;
+	}
+}

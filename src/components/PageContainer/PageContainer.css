@@ -1,0 +1,37 @@
+.page-container {
+	padding-inline: 6.5rem;
+	padding-block: 8rem;
+}
+
+.page-container:first-child {
+	padding-top: 2rem;
+}
+
+@media (max-width: 1150px) {
+	.page-container {
+		padding-inline: 4.5rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.page-container {
+		padding-inline: 3rem;
+		padding-block: 6rem;
+	}
+	
+	.page-container:first-child {
+		padding-top: 3rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.page-container {
+		padding-inline: 2.25rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.page-container {
+		padding-inline: 1rem;	
+	}
+}

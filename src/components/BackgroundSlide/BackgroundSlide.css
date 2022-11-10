@@ -1,0 +1,145 @@
+.background-slide {
+	position: relative;
+	width: 100%;
+	height: calc(var(--screen-height) - 4rem);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	border-radius: 7.5rem;
+	overflow: hidden;
+	background-color: #fffef5;
+}
+
+.background-slide .slide-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 7.5rem;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.background-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.background-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+/* .background-image::before {
+	content: " ";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+} */
+
+.background-slide .slide-card {
+	position: relative;
+	z-index: 4;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 70%;
+	text-align: center;
+	height: calc(100% - 4rem)
+}
+
+.background-slide .slide-card .card-inner {
+	height: 100%;
+}
+
+@media (max-width: 800px) {
+	.background-image {
+		padding: 0 !important;
+	}
+	.background-image img {
+		transform: scale(1.05)
+	}
+}
+
+@media (max-width: 1400px), (max-height: 800px) {
+	.background-slide .slide-card {
+		max-width: 80%;
+	}
+}
+
+
+@media (max-width: 900px), (max-height: 600px) {
+	.background-slide .slide-card {
+		max-width: 95%;
+	}
+}
+
+@media (max-width: 800px), (max-height: 500px) {
+	.background-slide {
+		border-radius: 0px;
+		border: none;
+		padding: 0;
+		background: transparent;
+		height: auto;
+		overflow: visible;
+	}
+	.background-image {
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-bottom: 3rem;
+		width: 100%;
+		height: auto;
+		border-radius: 4rem;
+		overflow: hidden;
+		border: 5px solid #fffef5;
+	}
+	.background-image img {
+		width: 100%;
+		height: calc(100% + 0.5rem);
+	}
+	.background-slide .slide-inner {
+		flex-direction: column;
+		border-radius: 0px;
+		overflow: visible;
+	}
+
+	.background-slide .card {
+		
+		width: 100%;
+		max-width: none;
+	}
+}
+
+@media (max-width: 500px) {
+	.background-slide .slide-card {
+		padding: 0;
+		padding-bottom: 1rem;
+	}
+	.background-slide .slide-card .card-inner {
+		padding-inline: 2rem;
+	}
+}
+
+@media (max-width: 450px) {
+	.background-image {
+		border-radius: 2rem;
+	}
+}
+
+@media (max-height: 650px) and (min-width: 801px) {
+	.background-slide .slide-card {
+		height: calc(100% - 2rem)
+	}
+}

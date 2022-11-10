@@ -1,0 +1,465 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "Urbanist", sans-serif;
+	background-color: #f8c0c6;
+	color: #242424
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: "Pouf Black Extra Expanded", sans-serif;
+	font-weight: 900;
+	font-size: 3.125rem;
+	margin-block: 1rem;
+	line-height: 1.032em;
+	letter-spacing: -0.015em;
+}
+
+.label {
+	color: #F38590;
+	font-size: 1.5rem;
+	line-height: 1.2em;
+	font-weight: bold;
+	margin-block: 1rem;
+}
+
+.caption {
+	color: #242424;
+	font-weight: bold;
+	font-size: 1.2rem;
+	margin-block: 0.5rem
+}
+
+.text-muted {
+	color: #F9C7CC
+}
+
+.text-hint {
+	color: #999999;
+}
+
+.bubblegum {
+	font-family: "Bubblegum", display;
+	font-size: 0.85em;
+}
+
+/* @media (min-width: 1600px) and (min-height: 800px) {
+	html {
+		font-size: 1vw;
+	}
+} */
+
+img {
+	color: transparent;
+}
+
+p {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+@media (max-width: 1150px), (max-height: 800px) {
+	h1 {
+		font-size: 2.875rem;
+		letter-spacing: -1px !important;
+	}
+
+	p {
+		font-size: 1.125rem;
+		line-height: 1.25rem;
+	}
+
+	.label {
+		font-size: 1.25rem;
+	}
+
+	.caption {
+		font-size: 1.05rem;
+	}
+}
+
+#google_translate_element2 {
+	display: none !important;
+}
+
+.goog-te-banner-frame {
+	display: none !important;
+}
+
+#goog-gt-tt {
+	display: none !important
+}
+
+body {
+	top: 0 !important;
+}
+
+@media (max-width: 1000px), (max-height: 600px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+
+	p {
+		font-size: 1rem;
+		line-height: 1.125rem;
+	}
+}
+
+a {
+	color: #f38590;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* Wallet Styles */
+.wallet-modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 900;
+}
+
+.wallet-modal .backdrop {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 901;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
+}
+
+.wallet-modal .backdrop.disabled {
+	pointer-events: none;
+}
+
+.wallet-modal .content {
+	position: relative;
+	z-index: 902;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	max-width: 32rem;
+	min-height: 20rem;
+	padding-inline: 2rem;
+	padding-block: 3rem;
+	background-color: #fffef5;
+	border-radius: 2rem;
+	box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+	transform: translateY(-50%) translateX(-50%);
+	border-radius: 5rem;
+	max-height: calc(100vh - 2rem);
+}
+
+.wallet-modal .content .overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+.wallet-modal .content .close {
+	position: absolute;
+	right: 3.5rem;
+	top: 2.5rem;
+	width: 15px;
+	cursor: pointer;
+}
+
+.wallet-modal .content .hero {
+	font-size: 38px;
+	text-align: center;
+	color: #F38590;
+}
+
+.wallet-modal .content .field:nth-child(1) {
+	margin-top: 40px;
+}
+
+.wallet-modal .content .field {
+	margin: 0;
+	padding: 20px 20px 20px;
+}
+
+.wallet-modal .content .field input {
+	padding: 0 15px;
+	color: #000;
+	font-size: 16px;
+	border-radius: 5px;
+	background-color: #efefef;
+}
+
+.wallet-modal .content .field label {
+	top: -12px;
+	font-size: 14px;
+}
+
+.wallet-modal .content .field .hint-container {
+	margin-top: 10px;
+}
+
+.wallet-modal .content .field .hint-container .field-notice {
+	font-size: 12px;
+	color: red;
+	margin-top: 5px;
+}
+
+.wallet-modal.choose-modal .content .items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+
+.wallet-modal.choose-modal .content .items img {
+	display: block;
+	margin: 0 auto;
+	width: 80px;
+	height: 95px;
+	object-fit: contain;
+}
+
+.wallet-modal.choose-modal .content .items>div {
+	flex: 0 0 48%;
+	max-width: 48%;
+	cursor: pointer;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	transition: all .3s linear;
+}
+
+.wallet-modal.choose-modal .content .items strong {
+	display: block;
+	text-align: center;
+	margin-top: 15px;
+}
+
+.wallet-modal.choose-modal .content .items>div:hover {
+	background-color: #f1f1f1;
+}
+
+.wallet-modal button {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-top: 25px;
+	margin-bottom: 10px;
+}
+
+.wallet-modal button:disabled {
+	opacity: .3;
+	pointer-events: none;
+}
+
+.wallet-modal .message-content {
+	padding-inline: 2rem;
+}
+
+.wallet-modal .message-content p {
+	text-align: center;
+	max-width: 20rem;
+	margin-inline: auto;
+	margin-bottom: 1.25rem;
+}
+
+.wallet-modal .content .stars-1 {
+	position: absolute;
+	top: 1.5rem;
+	left: 1.5rem;
+	width: 5.5rem;
+	margin: 0;
+}
+
+
+.wallet-modal .content .stars-2 {
+	position: absolute;
+	bottom: 1rem;
+	right: 1.5rem;
+	width: 4rem;
+	margin: 0;
+}
+
+.wallet-modal .message-content p.error {
+	color: red;
+	font-weight: 600;
+}
+
+.wallet-modal .content-message {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wallet-modal .content img {
+	display: block;
+	width: 8rem;
+	height: 8rem;
+	margin: 0 auto;
+	object-fit: contain;
+	padding: 10px;
+}
+
+.wallet-modal .loader-container {
+	position: absolute;
+	left: 4rem;
+	bottom: 2rem;
+}
+
+.wallet-modal .loader-container .lds-ring div {
+	border-top-color: #f38590 !important;
+}
+
+/* .wallet-modal.waiting .content {
+	color: #f48f05;
+	background-color: #fef3e0;
+}
+
+.wallet-modal.waiting .content .loader-container .lds-ring div {
+	border-top-color: #f48f05 !important;
+}
+
+.wallet-modal.warning .content,
+.wallet-modal.error .content {
+	color: #fc1808;
+	background-color: #ffe7e6;
+}
+
+.wallet-modal.warning .content .loader-container .lds-ring div,
+.wallet-modal.error .content .loader-container .lds-ring div {
+	border-top-color: #fc1808 !important;
+}
+
+.wallet-modal.success .content {
+	color: #00a707;
+	background-color: #e1fde9;
+}
+
+.wallet-modal.success .content .loader-container .lds-ring div {
+	border-top-color: #00a707 !important;
+} */
+
+@media(max-width: 690px) {
+	.wallet-modal {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.wallet-modal .content {
+		width: 100%;
+	}
+}
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 34px;
+	height: 34px;
+	margin: -2px;
+	border: 4px solid #fff;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+.wallet-modal.network {
+	z-index: 999999
+}
+
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+
+.no-margin {
+	margin: 0 !important;
+}
+
+.no-margin-top {
+	margin-top: 0 !important;
+}
+
+@media(max-width: 768px) {
+	/*
+	.wallet-modal.choose-modal .metamask {
+		display: none!important;
+	}
+	.wallet-modal.choose-modal .content .items {
+		justify-content: center;
+	}*/
+	.wallet-modal .message-content img {
+		width: 100px;
+		height: 100px;
+	}
+	.wallet-modal .message-content {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.wallet-modal .message-content p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.hide-mobile {
+		display: none;
+	}
+}
+
+
+.connected-text {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+.connected-text strong {
+	display: block;
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+@media(max-width: 768px) {
+	.connected-text {
+		font-size: 9px;
+	}	
+}

@@ -1,0 +1,43 @@
+.promo-code-area {
+    margin-top: 20px;
+    width: 100%;
+}
+.promo-code-area .toggle {
+    font-size: 15px;
+    cursor: pointer;
+}
+.promo-code-area .field {
+    position: relative;
+    margin-top: 5px!important;
+}
+.promo-code-area .apply {
+    position: absolute;
+    bottom: 8px;
+    right: 0;
+    background: #f38590;
+    border: 2px solid #F9C7CC;
+    color: white;
+    border-radius: 9999rem;
+    cursor: pointer;
+    transition: background-color 200ms ease-out, color 200ms ease-out;
+    white-space: nowrap;
+    appearance: none;
+    padding: 5px 10px;
+    -webkit-appearance: none;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: "Urbanist", sans-serif;
+    text-decoration: none !important;
+}
+.promo-code-area .code-desc {
+    font-size: 15px;
+}
+.promo-code-area .input-root label {
+    font-size: 14px;
+    top: 5px;
+}
+.promo-code-area .apply.disabled {
+    pointer-events: none;
+    opacity: .5;
+    cursor: default;
+}

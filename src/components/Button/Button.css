@@ -1,0 +1,78 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #f38590;
+	border: 5px solid #F9C7CC;
+	color: white;
+	font-size: 1.375rem;
+	padding-inline: 1.5rem;
+	padding-block: 0.625rem;
+	border-radius: 9999rem;
+	cursor: pointer;
+	min-width: 10rem;
+	transition: background-color 200ms ease-out, color 200ms ease-out;
+	white-space: nowrap;
+	appearance: none;
+	-webkit-appearance: none;
+	font-weight: 600;
+	font-family: "Urbanist", sans-serif;
+	text-decoration: none !important;
+	min-height: 3rem;
+}
+
+.button:not(.disabled):hover {
+	background-color: #f9c7cc;
+	color: #000;
+}
+
+.button svg {
+	margin-left: 0.5rem;
+}
+
+.button.variant-nav {
+	font-weight: 600;
+	border: none;
+	background-color: #fff;
+	color: #000;
+	padding-block: 0.75rem;
+	padding-inline: 2rem;
+	min-width: 10.5rem;
+	font-size: 1.1875rem;
+	min-height: 3.5rem
+}
+
+.button.variant-nav:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.button.variant-secondary {
+	background-color: #f9c7cc;
+	color: white;
+}
+
+.button.variant-secondary:not(.disabled):hover {
+	background-color: #f38590;
+	color: white;
+}
+
+@media (max-height: 800px) and (min-width: 801px) {
+	.button {
+		padding-block: 0.5rem;
+		font-size: 1.125rem;
+	}
+}
+
+@media (max-width: 800px) {
+	.button {
+		font-size: 1.125rem;
+		padding-inline: 1rem;
+		padding-block: 0.75rem;
+	}
+}
+
+
+.button.disabled {
+	background-color: #ccc;
+}
